@@ -1,2 +1,2 @@
-# tonfig
+# tomfig
 various config thingers
