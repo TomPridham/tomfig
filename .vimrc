@@ -1,5 +1,6 @@
+set background=dark
+:syntax on
 set nu
-syntax enable
 set shiftwidth=2
 set expandtab
 set tabstop=2
@@ -8,7 +9,6 @@ set nowritebackup
 set noswapfile
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-set clipboard^=unnamed,unnamedplus
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -56,10 +56,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set backspace=indent,eol,start
-set tabstop=2
 set softtabstop=2
-set shiftwidth=2
-set expandtab
 set smartindent
 set smarttab
 set autoindent
@@ -92,8 +89,10 @@ let g:lightline = {
   \ }
 
 colorscheme palenight
-set background=dark
 set notermguicolors
+if (has("termguicolors"))
+  set termguicolors
+endif
 " use more colors if they are available
 if !has('gui-running')
   set t_Co=256
@@ -193,3 +192,4 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 let mapleader="\<Space>"
+
