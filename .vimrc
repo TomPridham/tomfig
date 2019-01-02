@@ -21,7 +21,11 @@ Plug 'flowtype/vim-flow', {
       \ 'autoload': {
       \     'filetypes': 'javascript'
       \ }}
+Plug 'prettier/vim-prettier', {
+      \ 'do': 'npm install',
+      \}
 Plug 'FooSoft/vim-argwrap'                                        " wrap things in blocks/list
+Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'ajh17/VimCompletesMe'                                       " tab completion
 Plug 'bounceme/poppy.vim'                                         " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
@@ -99,6 +103,7 @@ if !has('gui-running')
 endif
 
 " abbrs
+cnoreabbrev color ColorToggle
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Qall! qall!
