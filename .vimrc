@@ -148,8 +148,7 @@ endif
 if executable(local_flow)
   let g:flow#flowpath = local_flow
 endif
-let g:flow#enable = 0
-" let g:javascript_plugin_flow = 1
+let g:flow#autoclose = 1
 
 let g:csstoinline_wrap_pixels = 1
 
