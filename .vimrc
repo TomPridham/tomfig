@@ -34,8 +34,6 @@ Plug 'drewtempelmeyer/palenight.vim'                              " theme
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy finder
-Plug 'junegunn/fzf.vim'                                           " fuzzy finder vim bindings
 Plug 'junegunn/vim-easy-align'                                    " align stuff on a symbol (like the comments in this block)
 Plug 'moll/vim-node'                                              " enchance vim for node (for example, better gf)
 Plug 'othree/csscomplete.vim'                                     " better css completion
@@ -46,6 +44,7 @@ Plug 'racer-rust/vim-racer'                                       " rust code co
 Plug 'ron-rs/ron.vim'                                             " .ron support
 Plug 'rust-lang/rust.vim'                                         " rust support
 Plug 'scrooloose/nerdcommenter'                                   " comment things
+Plug 'scrooloose/nerdtree'                                        " file explorer
 Plug 'tpope/vim-surround'                                         " surround with (), {}, etc
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
@@ -101,6 +100,12 @@ endif
 if !has('gui-running')
   set t_Co=256
 endif
+
+" nerdtree
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+map <C-n> :NERDTreeToggle<CR>
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " abbrs
 cnoreabbrev color ColorToggle
@@ -197,13 +202,3 @@ nmap ga <Plug>(EasyAlign)
 
 let mapleader="\<Space>"
 
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
-
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
