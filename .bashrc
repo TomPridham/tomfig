@@ -1,5 +1,5 @@
 source ~/.bash/git-completion.sh
-source ~/.bash/bash-git-prompt/gitprompt.sh
+source ~/.bash/gitprompt.sh
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 alias la='ls -A'
