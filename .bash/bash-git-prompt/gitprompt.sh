@@ -700,4 +700,3 @@ function gp_install_prompt {
 }
 
 gp_install_prompt
-
