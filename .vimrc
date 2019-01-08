@@ -25,20 +25,22 @@ Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
 Plug 'FooSoft/vim-argwrap'                                        " wrap things in blocks/list
-Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'ajh17/VimCompletesMe'                                       " tab completion
 Plug 'bounceme/poppy.vim'                                         " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
+Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
+Plug 'jparise/vim-graphql'                                        " graphql support
 Plug 'junegunn/vim-easy-align'                                    " align stuff on a symbol (like the comments in this block)
 Plug 'moll/vim-node'                                              " enchance vim for node (for example, better gf)
 Plug 'othree/csscomplete.vim'                                     " better css completion
 Plug 'othree/javascript-libraries-syntax.vim'                     " more js syn
 Plug 'othree/yajs.vim'                                            " some js syntax
+Plug 'pangloss/vim-javascript'                                    " js-syn
 Plug 'plasticboy/vim-markdown'                                    " better markdown features
 Plug 'racer-rust/vim-racer'                                       " rust code completion and navigation
 Plug 'ron-rs/ron.vim'                                             " .ron support
