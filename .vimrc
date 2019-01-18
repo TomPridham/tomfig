@@ -1,6 +1,7 @@
 set background=dark
 :syntax on
 set nu
+set visualbell
 set shiftwidth=2
 set expandtab
 set tabstop=2
@@ -87,8 +88,9 @@ let g:ale_linters = {
 let g:ale_rust_cargo_use_check = 1
 let g:racer_cmd = "/home/tom/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
-let g:lightline.colorscheme = 'palenight'
-
+let g:lightline = {
+      \ 'colorscheme': 'palenight',
+      \ }
 colorscheme palenight
 set notermguicolors
 if (has("termguicolors"))
