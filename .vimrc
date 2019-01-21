@@ -2,6 +2,7 @@ set background=dark
 :syntax on
 set nu
 set visualbell
+set noeb vb t_vb=
 set shiftwidth=2
 set expandtab
 set tabstop=2
