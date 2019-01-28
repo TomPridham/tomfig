@@ -16,3 +16,4 @@ alias ls='ls -1'
 alias ns='npm start'
 export DISPLAY=:0.0
 export TERM=xterm-256color
+export PATH="$HOME/.cargo/bin:$PATH"
