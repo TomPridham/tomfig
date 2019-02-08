@@ -46,7 +46,6 @@ Plug 'racer-rust/vim-racer'                                       " rust code co
 Plug 'ron-rs/ron.vim'                                             " .ron support
 Plug 'rust-lang/rust.vim'                                         " rust support
 Plug 'scrooloose/nerdcommenter'                                   " comment things
-Plug 'scrooloose/nerdtree'                                        " file explorer
 Plug 'tpope/vim-surround'                                         " surround with (), {}, etc
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
