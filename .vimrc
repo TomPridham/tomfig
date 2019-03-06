@@ -33,6 +33,7 @@ Plug 'bronson/vim-trailing-whitespace'                            " highlight tr
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
 Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
+Plug 'editorconfig/editorconfig-vim'                              " respect editor config
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
@@ -199,3 +200,6 @@ let mapleader="\<Space>"
 let g:NERDCustomDelimiters={
 	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
+
+" show tabs
+set list lcs=tab:\|\
