@@ -1,5 +1,5 @@
 set background=dark
-:syntax on
+syntax on
 set nu
 set visualbell
 set noeb vb t_vb=
