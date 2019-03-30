@@ -203,3 +203,5 @@ let g:NERDCustomDelimiters={
 
 " show tabs
 set list lcs=tab:\|\
+
+set foldmethod=marker
