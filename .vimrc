@@ -27,12 +27,14 @@ Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
 Plug 'FooSoft/vim-argwrap'                                        " wrap things in blocks/list
+Plug 'Quramy/tsuquyomi'                                           " typescript completion
 Plug 'ajh17/VimCompletesMe'                                       " tab completion
 Plug 'bounceme/poppy.vim'                                         " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
 Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
+Plug 'leafgarland/typescript-vim'                                 " typescript support
 Plug 'editorconfig/editorconfig-vim'                              " respect editor config
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
