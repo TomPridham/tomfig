@@ -19,10 +19,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'flowtype/vim-flow', {
-      \ 'autoload': {
-      \     'filetypes': 'javascript'
-      \ }}
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
@@ -32,14 +28,12 @@ Plug 'ajh17/VimCompletesMe'                                       " tab completi
 Plug 'bounceme/poppy.vim'                                         " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
-Plug 'chrisbra/Colorizer'                                         " colorizes hex codes
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
 Plug 'leafgarland/typescript-vim'                                 " typescript support
 Plug 'editorconfig/editorconfig-vim'                              " respect editor config
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
-Plug 'junegunn/vim-easy-align'                                    " align stuff on a symbol (like the comments in this block)
 Plug 'moll/vim-node'                                              " enchance vim for node (for example, better gf)
 Plug 'othree/csscomplete.vim'                                     " better css completion
 Plug 'othree/javascript-libraries-syntax.vim'                     " more js syn
@@ -49,10 +43,8 @@ Plug 'racer-rust/vim-racer'                                       " rust code co
 Plug 'ron-rs/ron.vim'                                             " .ron support
 Plug 'rust-lang/rust.vim'                                         " rust support
 Plug 'scrooloose/nerdcommenter'                                   " comment things
-Plug 'tpope/vim-surround'                                         " surround with (), {}, etc
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
-Plug 'vim-utils/vim-troll-stopper'                                " highilght unicode chars that look like ascii chars
 Plug 'w0rp/ale'                                                   " linting
 call plug#end()
 
@@ -142,16 +134,6 @@ let g:vim_markdown_fenced_languages = [
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_folding_disabled = 1
 
-" flow
-let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
-if matchstr(local_flow, "^\/\\w") == ''
-  let local_flow= getcwd() . "/" . local_flow
-endif
-if executable(local_flow)
-  let g:flow#flowpath = local_flow
-endif
-let g:flow#autoclose = 1
-
 let g:csstoinline_wrap_pixels = 1
 
 " javascript-libraries-syntax config
@@ -191,12 +173,6 @@ endfu
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
 let mapleader="\<Space>"
 " nerdcommenter
 let g:NERDCustomDelimiters={
@@ -205,5 +181,3 @@ let g:NERDCustomDelimiters={
 
 " show tabs
 set list lcs=tab:\|\
-
-set foldmethod=marker
