@@ -43,6 +43,7 @@ Plug 'racer-rust/vim-racer'                                       " rust code co
 Plug 'ron-rs/ron.vim'                                             " .ron support
 Plug 'rust-lang/rust.vim'                                         " rust support
 Plug 'scrooloose/nerdcommenter'                                   " comment things
+Plug 'tpope/vim-surround'                                         " surround things
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 Plug 'w0rp/ale'                                                   " linting
