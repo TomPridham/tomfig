@@ -82,6 +82,7 @@ let g:ale_linters = {
   \ 'jsx': ['eslint']
   \ }
 let g:ale_rust_cargo_use_check = 1
+let g:tsuquyomi_disable_quickfix = 1
 let g:racer_cmd = "/home/tom/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 let g:lightline = {
