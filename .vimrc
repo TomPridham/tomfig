@@ -62,11 +62,6 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = "cargo fmt --"
-let g:rustfmt_emit_files = 1
-let g:rustfmt_command = 'rustfmt'
-let g:rustfmt_options = ''
 let g:lightline = {
       \ 'colorscheme': 'palenight',
       \ 'active': {
