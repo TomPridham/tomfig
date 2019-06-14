@@ -1,88 +1,35 @@
-set background=dark
-syntax on
-set nu
-set visualbell
-set noeb vb t_vb=
-set shiftwidth=2
-set expandtab
-set tabstop=2
-set nobackup
-set nowritebackup
-set noswapfile
+let mapleader="\<Space>"
+
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'prettier/vim-prettier', {
-      \ 'do': 'npm install',
-      \}
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}      " code completion
-Plug 'bounceme/poppy.vim'                                         " rainbow parens
-Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
-Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
-Plug 'drewtempelmeyer/palenight.vim'                              " theme
-Plug 'editorconfig/editorconfig-vim'                              " respect editor config
-Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
-Plug 'itchyny/lightline.vim'                                      " colored status
-Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
-Plug 'sheerun/vim-polyglot'                                       " polyglot language features
-Plug 'scrooloose/nerdcommenter'                                   " comment things
-Plug 'vim-scripts/paredit.vim'                                    " balance parens
-Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
-call plug#end()
-
-let g:rustfmt_autosave = 1
-let g:rustfmt_command = "cargo fmt --"
-let g:rustfmt_emit_files = 1
-let g:rustfmt_command = 'rustfmt'
-let g:rustfmt_options = ''
-
 filetype plugin indent on
-
+set autoindent
+set background=dark
+set backspace=indent,eol,start
+set clipboard^=unnamed,unnamedplus
+set cmdheight=2
 set encoding=utf-8
+set expandtab
 set fileencoding=utf-8
 set fileencodings=utf-8
-set backspace=indent,eol,start
-set softtabstop=2
+set hidden
+set laststatus=2
+set list lcs=tab:\|\
+set nobackup
+set noeb vb t_vb=
+set noswapfile
+set nowritebackup
+set nu
+set shiftwidth=2
+set shortmess+=c
+set signcolumn=yes
 set smartindent
 set smarttab
-set autoindent
-set laststatus=2
-set hidden
-set clipboard^=unnamed,unnamedplus
-
-" tabs
-nnoremap > >>
-nnoremap < <<
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
-
-let g:lightline = {
-      \ 'colorscheme': 'palenight',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
-      \ },
-      \ }
-colorscheme palenight
-set notermguicolors
-if (has("termguicolors"))
-  set termguicolors
-endif
-" use more colors if they are available
-if !has('gui-running')
-  set t_Co=256
-endif
+set softtabstop=2
+set tabstop=2
+set updatetime=300
+set visualbell
+syntax on
 
 " abbrs
 cnoreabbrev color ColorToggle
@@ -106,46 +53,24 @@ cnoreabbrev EX Ex
 cnoreabbrev ex Ex
 inoreabbr lmbd λ
 
-" vim-markdown
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_fenced_languages = [
-      \'bash=Shell',
-      \'console=Shell',
-      \'css=CSS',
-      \'html=HTML',
-      \'javascript=JavaScript',
-      \'js=JavaScript',
-      \'jsx=JSX',
-      \'less=CSS',
-      \'sass=CSS',
-      \'scss=CSS',
-      \'sh=Shell'
-      \]
-let g:vim_markdown_new_list_item_indent = 2
-let g:vim_markdown_folding_disabled = 1
-
-let g:csstoinline_wrap_pixels = 1
-
-" highlight the 121st column of wide lines
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%121v', 100)
-
-" argwrap
-let g:argwrap_padded_braces = '[{'
-let g:argwrap_tail_comma_braces = '[{'
-nnoremap <silent> <leader>a :ArgWrap<CR>
+" tabs
+nnoremap > >>
+nnoremap < <<
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 
 " match angle brackest
 set matchpairs+=<:>
 
+" search settings
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 highlight clear Search
 highlight       Search    ctermfg=White
-" Clean search (highlight)
-nnoremap <silent> <leader>/ :noh<cr>
+
 " blink the line containing the match
 fu! HLNext (blinktime)
   set invcursorline
@@ -154,40 +79,80 @@ fu! HLNext (blinktime)
   set invcursorline
   redraw
 endfu
+
 " highlight matches when jumping to next
 " This rewires n and N to do the highlighing...
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
-let mapleader="\<Space>"
+" load vim-plug if it doesn't exist
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" plugins
+call plug#begin('~/.vim/plugged')
+Plug 'prettier/vim-prettier', {
+      \ 'do': 'npm install',
+      \}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}      " code completion
+Plug 'bounceme/poppy.vim'                                         " rainbow parens
+Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
+Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
+Plug 'drewtempelmeyer/palenight.vim'                              " theme
+Plug 'editorconfig/editorconfig-vim'                              " respect editor config
+Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
+Plug 'itchyny/lightline.vim'                                      " colored status
+Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
+Plug 'sheerun/vim-polyglot'                                       " polyglot language features
+Plug 'scrooloose/nerdcommenter'                                   " comment things
+Plug 'vim-scripts/paredit.vim'                                    " balance parens
+Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
+call plug#end()
+
+" rust settings
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = "cargo fmt --"
+let g:rustfmt_emit_files = 1
+let g:rustfmt_command = 'rustfmt'
+let g:rustfmt_options = ''
+
+" lightline/theme settings
+let g:lightline = {
+      \ 'colorscheme': 'palenight',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status'
+      \ },
+      \ }
+colorscheme palenight
+set notermguicolors
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" use more colors if they are available
+if !has('gui-running')
+  set t_Co=256
+endif
+
+" highlight the 121st column of wide lines
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%121v', 100)
+
 " nerdcommenter
 let g:NERDCustomDelimiters={
 	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
 
-" show tabs
-set list lcs=tab:\|\
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-" Smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
+" CoC
 " Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugins.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -217,8 +182,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -226,6 +189,7 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -257,24 +221,15 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
