@@ -39,7 +39,11 @@ Plug 'tpope/vim-surround'                                         " surround thi
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 call plug#end()
-
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = "cargo fmt --"
+let g:rustfmt_emit_files = 1
+let g:rustfmt_command = 'rustfmt'
+let g:rustfmt_options = ''
 
 filetype plugin indent on
 
