@@ -22,7 +22,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
-Plug 'FooSoft/vim-argwrap'                                        " wrap things in blocks/list
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}      " code completion
 Plug 'bounceme/poppy.vim'                                         " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
@@ -32,13 +31,12 @@ Plug 'editorconfig/editorconfig-vim'                              " respect edit
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
-Plug 'plasticboy/vim-markdown'                                    " better markdown features
 Plug 'sheerun/vim-polyglot'                                       " polyglot language features
 Plug 'scrooloose/nerdcommenter'                                   " comment things
-Plug 'tpope/vim-surround'                                         " surround things
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 call plug#end()
+
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = "cargo fmt --"
 let g:rustfmt_emit_files = 1
