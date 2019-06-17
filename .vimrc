@@ -8,6 +8,7 @@ set background=dark
 set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus
 set cmdheight=2
+set display+=lastline
 set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
