@@ -2,11 +2,14 @@ source ~/.bash/git-completion.sh
 source ~/.bash/bash-git-prompt/gitprompt.sh
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
+alias cb='cargo bench'
 alias cr='cargo run'
+alias ct='cargo test'
 alias gb='git branch'
 alias gc='git checkout '
 alias gcam='git commit -am '
 alias gd='git diff'
+alias gdc='git diff --name-only --diff-filter=U'
 alias gp='git pull'
 alias gr='git reset --hard'
 alias gs='git status'
