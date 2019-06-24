@@ -33,25 +33,25 @@ set visualbell
 syntax on
 
 " abbrs
-cnoreabbrev color ColorToggle
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev E e
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
-cnoreabbrev X x
-cnoreabbrev stu sort u
-cnoreabbrev Stu sort u
-cnoreabbrev Set set
 cnoreabbrev Bd bd
+cnoreabbrev E e
 cnoreabbrev EX Ex
+cnoreabbrev Q q
+cnoreabbrev Q! q!
+cnoreabbrev Qall qall
+cnoreabbrev Qall! qall!
+cnoreabbrev Set set
+cnoreabbrev Stu sort u
+cnoreabbrev W w
+cnoreabbrev W! w!
+cnoreabbrev WQ wq
+cnoreabbrev Wa wa
+cnoreabbrev Wq wq
+cnoreabbrev X x
 cnoreabbrev ex Ex
+cnoreabbrev sss syntax sync fromstart
+cnoreabbrev stu sort u
+cnoreabbrev wQ wq
 inoreabbr lmbd λ
 
 " tabs
