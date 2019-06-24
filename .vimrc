@@ -99,7 +99,7 @@ Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}      " code completion
-Plug 'bounceme/poppy.vim'                                         " rainbow parens
+Plug 'luochen1990/rainbow'                                        " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
@@ -112,6 +112,9 @@ Plug 'scrooloose/nerdcommenter'                                   " comment thin
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 call plug#end()
+
+" rainbow parens
+let g:rainbow_active = 1
 
 " rust settings
 let g:rustfmt_autosave = 1
@@ -199,8 +202,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
 
 augroup mygroup
   autocmd!
@@ -224,13 +227,3 @@ command! -nargs=0 Format :call CocAction('format')
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
