@@ -1,7 +1,6 @@
 source ~/.bash/git-completion.sh
 source ~/.bash/bash-git-prompt/gitprompt.sh
-GIT_PROMPT_ONLY_IN_REPO=1
-GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
+
 alias cb='cargo bench'
 alias cr='cargo run'
 alias ct='cargo test'
@@ -20,8 +19,12 @@ alias masada='cd jane-masada/MVC/VeryJane.Applications.Masada'
 alias ns='npm start'
 alias t='docker exec -it jane-com_webpack_1 touch src/app.js'
 alias ts='docker exec -it jane-seller_webpack_1 touch src/index.js'
+
 export DISPLAY=:0.0
 export TERM=xterm-256color
 export PATH="$HOME/.cargo/bin:$PATH"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
+set -o vi
 cd ~/projects
