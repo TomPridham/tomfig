@@ -2,6 +2,7 @@ source ~/.bash/git-completion.sh
 source ~/.bash/bash-git-prompt/gitprompt.sh
 
 alias cb='cargo bench'
+alias cc='cargo check'
 alias cr='cargo run'
 alias ct='cargo test'
 alias gb='git branch'
@@ -27,4 +28,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi
+if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] && [[ ! "$TERM" =~ tmux  ]] && [ -z "$TMUX"  ]; then
+    exec tmux
+fi
 cd ~/projects
