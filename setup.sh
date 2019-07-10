@@ -16,12 +16,14 @@ git config --global core.editor "vim"
 #cd projects
 #git clone git@github.com:TomPridham/tomfig.git
 mkdir ~/.config/autostart
+mkdir ~/.vim
 ln -s ~/projects/tomfig/.bash ~/.bash
 ln -s ~/projects/tomfig/.bashrc ~/.bashrc
 ln -s ~/projects/tomfig/.bashrc ~/.bash_profile
 ln -s ~/projects/tomfig/.inputrc ~/.inputrc
 ln -s ~/projects/tomfig/.ripgreprc ~/.ripgreprc
 ln -s ~/projects/tomfig/.vimrc ~/.vimrc
+ln -s ~/projects/tomfig/coc-settings.json ~/.vim/coc-settings.json
 ln -s ~/projects/tomfig/fusuma ~/.config
 ln -s ~/projects/tomfig/kitty ~/.config
 ln -s ~/projects/tomfig/alacritty/ ~/.config

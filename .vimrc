@@ -1,5 +1,6 @@
 let mapleader="\<Space>"
 
+autocmd BufEnter * :syntax sync minlines=200
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 filetype plugin indent on

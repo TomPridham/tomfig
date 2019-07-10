@@ -1,0 +1,11 @@
+{
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ],
+  "eslint.options": {"parser": "@typescript-eslint/parser"},
+  "tsserver.log": "verbose"
+}
