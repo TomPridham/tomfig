@@ -3,13 +3,14 @@
 setxkbmap -option "caps:swapescape"
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt update
-sudo apt install libpq-dev postgresql postgresql-contrib fonts-firacode libx11-dev ripgrep curl alacritty xclip vim-gtk3 git libinput-tools xdotool nodejs build-essential ruby -y
+sudo apt install libssl-dev libpq-dev postgresql postgresql-contrib fonts-firacode libx11-dev ripgrep curl alacritty xclip vim-gtk3 git libinput-tools xdotool nodejs build-essential ruby -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl https://sh.rustup.rs -sSf | sh
 
 git config --global user.email "pridham.tom@gmail.com"
 git config --global user.name "Tom Pridham"
 git config --global core.editor "vim"
+git config --global push.default current
 
 #cd $HOME/
 #mkdir projects
