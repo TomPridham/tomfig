@@ -1,11 +1,33 @@
-#!bin/bash
+#!/bin/bash
 
 setxkbmap -option "caps:swapescape"
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt update
-sudo apt install libpq-dev postgresql postgresql-contrib fonts-firacode libx11-dev ripgrep curl alacritty xclip vim-gtk3 git libinput-tools xdotool nodejs build-essential ruby -y
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install -y \
+  alacritty \
+  build-essential \
+  curl \
+  fonts-firacode \
+  git \
+  libinput-tools \
+  libpq-dev \
+  libx11-dev \
+  nodejs \
+  npm \
+  postgresql \
+  postgresql-contrib \
+  ripgrep \
+  ruby \
+  vim-gtk3 \
+  xclip \
+  xdotool
+
+npm i -g n && \
+  n latest && \
+  npm i -g npm npx
+
 curl https://sh.rustup.rs -sSf | sh
+rustup toolchain install nightly
 
 git config --global user.email "pridham.tom@gmail.com"
 git config --global user.name "Tom Pridham"
@@ -15,8 +37,8 @@ git config --global core.editor "vim"
 #mkdir projects
 #cd projects
 #git clone git@github.com:TomPridham/tomfig.git
-mkdir $HOME/.config/autostart
-mkdir $HOME/.vim
+mkdir -p $HOME/.config/autostart
+mkdir -p $HOME/.vim
 ln -s $HOME/projects/tomfig/.bash $HOME/.bash
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bashrc
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bash_profile
