@@ -28,7 +28,12 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi
+
 if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] && [[ ! "$TERM" =~ tmux  ]] && [ -z "$TMUX"  ]; then
     exec tmux
 fi
-cd ~/projects
+
+if [ "$(pwd)" != "$HOME/projects" ];
+    then cd "$HOME/projects";
+fi
+
