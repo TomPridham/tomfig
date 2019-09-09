@@ -1,1 +1,0 @@
-/home/tom/projects/tomfig/.bash
