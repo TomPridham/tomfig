@@ -23,7 +23,6 @@ alias ts='docker exec -it jane-seller_webpack_1 touch src/index.js'
 
 export DISPLAY=:0.0
 export TERM=xterm-256color
-<<<<<<< HEAD
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$HOME/.cargo/bin:$PATH"
