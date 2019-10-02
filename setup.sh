@@ -1,43 +1,19 @@
 #!/bin/bash
 
-setxkbmap -option "caps:swapescape"
-sudo add-apt-repository ppa:mmstick76/alacritty
-sudo apt update
-sudo apt install -y \
-  alacritty \
-  build-essential \
-  curl \
-  fonts-firacode \
-  git \
-  libinput-tools \
-  libpq-dev \
-  libssl-dev \
-  libx11-dev \
-  nodejs \
-  npm \
-  postgresql \
-  postgresql-contrib \
-  ripgrep \
-  ruby \
-  vim-gtk3 \
-  xclip \
-  xdotool
+curl https://sh.rustup.rs -sSf | sh
+
+exec bash
 
 npm i -g n && \
   n latest && \
   npm i -g npm npx
 
-rustup toolchain install nightly
+exec bash
 
-git config --global user.email "pridham.tom@gmail.com"
-git config --global user.name "Tom Pridham"
-git config --global core.editor "vim"
-git config --global push.default current
+rustup toolchain install stable
 
-#cd $HOME/
-#mkdir projects
-#cd projects
-#git clone git@github.com:TomPridham/tomfig.git
+exec bash
+
 mkdir -p $HOME/.config/autostart
 mkdir -p $HOME/.vim
 ln -s $HOME/projects/tomfig/.bash $HOME/.bash
@@ -53,10 +29,5 @@ ln -s $HOME/projects/tomfig/alacritty/ $HOME/.config
 
 vim -c 'PlugInstall|q'
 vim -c 'CocInstall -sync coc-json coc-html coc-tsserver coc-css coc-rls coc-yaml coc-highlight coc-emmet coc-snippets coc-lists|q'
-
-sudo gpasswd -a $USER input
-sudo gem install fusuma
-
-printf "[Desktop Entry]\nName=fusuma\nExec=fusuma -d\nType=Application" > $HOME/.config/autostart/fusuma.desktop
 
 cargo install cargo-bump cargo-edit cargo-funnel

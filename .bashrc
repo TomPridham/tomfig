@@ -23,9 +23,10 @@ alias ts='docker exec -it jane-seller_webpack_1 touch src/index.js'
 
 export DISPLAY=:0.0
 export TERM=xterm-256color
-export PATH="$HOME/.cargo/bin:$PATH"
+export CARGOPATH="$HOME/.cargo/bin"
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$HOME/.cargo/bin:$PATH"
+export BREWPATH="/usr/local/sbin"
+export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
