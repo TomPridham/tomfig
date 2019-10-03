@@ -9,6 +9,7 @@ sudo aptitude install -y \
   curl \
   fonts-firacode \
   git \
+  gnome-tweaks \
   libinput-tools \
   libpq-dev \
   libssl-dev \

@@ -1,11 +1,11 @@
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
-  #TERM: xterm-256color
+  # available, otherwise `xterm-256color` is used
+  TERM: xterm-256color
 
 window:
   # Window padding (changes require restart)
@@ -23,8 +23,8 @@ window:
   decorations: full
 
   startup_mode: Windowed
-  #title: Alacritty
-  #class: Alacritty
+  title: Alacritty
+  class: Alacritty
 
 scrolling:
   history: 10000
@@ -51,17 +51,17 @@ tabspaces: 8
 
 # Font configuration (changes require restart)
 font:
-  #normal:
-    #family: Fira Code Regular
-    #style: Regular
+  normal:
+    family: Fira Code Regular
+    style: Regular
 
-  #bold:
-    #family: Fira Code Regular
-    #style: Bold
+  bold:
+    family: Fira Code Regular
+    style: Bold
 
-  #italic:
-    #family: Fira Code Regular
-    #style: Italic
+  italic:
+    family: Fira Code Regular
+    style: Italic
 
   size: 11.0
 
@@ -81,7 +81,7 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
+# Colors
 colors:
   # Default colors
   primary:
@@ -93,7 +93,7 @@ colors:
     # The dimmed foreground color is calculated automatically if it is not present.
     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
     # is `false`, the normal foreground color will be used.
-    #bright_foreground: '0xffffff'
+    # bright_foreground: '0xffffff'
 
   # Normal colors
   normal:
@@ -136,7 +136,6 @@ mouse:
   hide_when_typing: true
 
   url:
-    #launcher:
     modifiers: None
 
 selection:
