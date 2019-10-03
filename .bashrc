@@ -12,7 +12,7 @@ alias gd='git diff'
 alias gdc='git diff --name-only --diff-filter=U'
 alias gp='git pull'
 alias gr='git reset --hard'
-alias gs='git status'
+alias gs='git status -u'
 alias gu='git push -u'
 alias la='ls -A1'
 alias ls='ls -1'
@@ -38,8 +38,3 @@ chmod +x $HOME/projects/tomfig/bin/*.sh
 if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] && [[ ! "$TERM" =~ tmux  ]] && [ -z "$TMUX"  ]; then
     exec tmux
 fi
-
-if [ "$(pwd)" != "$HOME/projects" ];
-    then cd "$HOME/projects";
-fi
-

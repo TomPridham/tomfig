@@ -22,4 +22,4 @@ unzip ./BetterTouchTool.zip
 sudo cp -R BetterTouchTool.app/ /Applications/BetterTouchTool.app
 rm BetterTouchTool.zip BetterTouchTool.app
 
-sh setup.sh
+./setup.sh
