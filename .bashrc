@@ -28,6 +28,7 @@ export GOPATH="$HOME/go"
 export BREWPATH="/usr/local/sbin"
 export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export GPG_TTY=$(tty)
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi

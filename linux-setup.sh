@@ -28,4 +28,6 @@ sudo gem install fusuma
 
 printf "[Desktop Entry]\nName=fusuma\nExec=fusuma -d\nType=Application" > $HOME/.config/autostart/fusuma.desktop
 
+git config --global gpg.program gpg2
+
 sh setup.sh

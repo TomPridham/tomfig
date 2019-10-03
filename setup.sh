@@ -2,21 +2,22 @@
 
 curl https://sh.rustup.rs -sSf | sh
 
-exec bash
+. ~/projects/tomfig/.bashrc
 
 npm i -g n && \
   n latest && \
   npm i -g npm npx
 
-exec bash
+. ~/projects/tomfig/.bashrc
 
 rustup toolchain install stable
 
-exec bash
+. ~/projects/tomfig/.bashrc
 
 mkdir -p $HOME/.config/autostart
 mkdir -p $HOME/.vim
 ln -s $HOME/projects/tomfig/.bash $HOME/.bash
+ln -s $HOME/projects/tomfig/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bashrc
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bash_profile
 ln -s $HOME/projects/tomfig/.inputrc $HOME/.inputrc

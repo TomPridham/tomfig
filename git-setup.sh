@@ -2,6 +2,7 @@ git config --global user.name "Tom Pridham"
 git config --global user.email "pridham.tom@gmail.com"
 git config --global core.editor "vim"
 git config --global push.default current
+git config --global commit.gpgsign true
 
 read -p 'enter ssh-key name: ' SSHKEYNAME
 read -sp 'enter ssh-key password' SSHKEYPASSWORD
@@ -15,6 +16,6 @@ else
 fi;
 
 eval "$(ssh-agent -s)"
-ssh-add -K "$SSHDIR"
+ssh-add -K $SSHDIR
 
 pbcopy < "${SSHDIR}.pub"
