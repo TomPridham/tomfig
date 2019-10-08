@@ -14,6 +14,7 @@ sudo apt autoremove nodejs npm
 source ~/projects/tomfig/.bashrc
 
 rustup toolchain install stable
+rustup component add rls rust-analysis rust-src
 
 source ~/projects/tomfig/.bashrc
 
@@ -31,6 +32,6 @@ ln -s $HOME/projects/tomfig/kitty $HOME/.config
 ln -s $HOME/projects/tomfig/alacritty/ $HOME/.config
 
 vim -c 'PlugInstall|q'
-vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rls coc-yaml coc-highlight coc-emmet coc-snippets coc-lists|q'
+vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rls coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext|q'
 
-cargo install cargo-bump cargo-edit cargo-funnel
+cargo install cargo-bump cargo-edit cargo-funnel tectonic
