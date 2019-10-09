@@ -22,6 +22,7 @@ set noeb vb t_vb=
 set noswapfile
 set nowritebackup
 set nu
+set mouse=a
 set shiftwidth=2
 set shortmess+=c
 set signcolumn=yes
@@ -110,7 +111,6 @@ Plug 'editorconfig/editorconfig-vim'                              " respect edit
 Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
-Plug 'sheerun/vim-polyglot'                                       " polyglot language features
 Plug 'scrooloose/nerdcommenter'                                   " comment things
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
@@ -230,3 +230,4 @@ command! -nargs=0 Format :call CocActionAsync('format')
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
