@@ -8,13 +8,13 @@ sudo chown -R $USER /usr/local
 npm i -g n
 n lts
 n prune
-npm i -g npm npx
+npm i -g npm npx yarn
 sudo apt autoremove nodejs npm
 
 source ~/projects/tomfig/.bashrc
 
 rustup toolchain install stable
-rustup component add rls rust-analysis rust-src
+rustup component add rls rust-analysis rust-src clippy rustfmt
 
 source ~/projects/tomfig/.bashrc
 
