@@ -3,6 +3,8 @@ let mapleader="\<Space>"
 autocmd BufEnter * :syntax sync minlines=200
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+au BufRead,BufNewFile *.ts set filetype=typescript
+au BufRead,BufNewFile *.tsx set filetype=typescriptreact
 filetype plugin indent on
 set autoindent
 set background=dark
@@ -102,7 +104,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \}
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}      " code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}                   " code completion
 Plug 'luochen1990/rainbow'                                        " rainbow parens
 Plug 'bronson/vim-trailing-whitespace'                            " highlight trailing whitespace
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.

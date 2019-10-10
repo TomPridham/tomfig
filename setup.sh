@@ -8,7 +8,7 @@ sudo chown -R $USER /usr/local
 npm i -g n
 n lts
 n prune
-npm i -g npm npx yarn
+npm i -g npm npx yarn webpack webpack-cli
 sudo apt autoremove nodejs npm
 
 source ~/projects/tomfig/.bashrc
