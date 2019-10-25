@@ -116,6 +116,8 @@ Plug 'jiangmiao/auto-pairs'                                       " auto insert 
 Plug 'scrooloose/nerdcommenter'                                   " comment things
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
+Plug 'quramy/vim-js-pretty-template'                              " pretty template strings
+Plug 'sheerun/vim-polyglot'                                       " language pack
 call plug#end()
 
 " rainbow parens
