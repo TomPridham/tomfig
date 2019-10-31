@@ -117,7 +117,7 @@ Plug 'scrooloose/nerdcommenter'                                   " comment thin
 Plug 'vim-scripts/paredit.vim'                                    " balance parens
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 Plug 'quramy/vim-js-pretty-template'                              " pretty template strings
-Plug 'sheerun/vim-polyglot'                                       " language pack
+Plug 'sheerun/vim-polyglot'                                       " polyglot lang highlighting, etc
 call plug#end()
 
 " rainbow parens
