@@ -34,4 +34,4 @@ ln -s $HOME/projects/tomfig/alacritty/ $HOME/.config
 vim -c 'PlugInstall|q'
 vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rls coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext|q'
 
-cargo install cargo-bump cargo-edit cargo-funnel tectonic
+cargo install cargo-bump cargo-edit cargo-funnel diesel_cli --no-default-features --features postgres
