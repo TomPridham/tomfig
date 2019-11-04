@@ -18,6 +18,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set hidden
 set laststatus=2
+set lazyredraw
 set list lcs=tab:\|\
 set nobackup
 set noeb vb t_vb=
