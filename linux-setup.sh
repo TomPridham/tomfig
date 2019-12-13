@@ -13,10 +13,12 @@ sudo aptitude install -y \
   git \
   gnome-tweaks \
   gnupg-agent \
+  libclang-dev \
   libinput-tools \
   libpq-dev \
   libssl-dev \
   libx11-dev \
+  llvm \
   net-tools \
   nodejs \
   npm \
