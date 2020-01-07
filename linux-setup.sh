@@ -3,7 +3,7 @@
 setxkbmap -option "caps:swapescape"
 sudo add-apt-repository ppa:mmstick76/alacritty -y
 sudo apt update
-sudo aptitude install -y \
+sudo apt install -y \
   alacritty \
   apt-transport-https \
   build-essential \
@@ -13,6 +13,7 @@ sudo aptitude install -y \
   git \
   gnome-tweaks \
   gnupg-agent \
+  gnupg2 \
   libclang-dev \
   libinput-tools \
   libpq-dev \
@@ -22,23 +23,19 @@ sudo aptitude install -y \
   net-tools \
   nodejs \
   npm \
-  pkg-config \ 
-  postgresql \
+  pkg-config \
+  postgresql-11 \
   postgresql-contrib \
   ripgrep \
   ruby \
   software-properties-common \
   tmux \
+  tmux \
   vim-gtk3 \
   xclip \
   xdotool
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) \
-  stable"
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose
+sudo apt install -y docker.io  docker-compose
 sudo usermod -aG docker $USER
 sudo chmod 666 /var/run/docker.sock
 
@@ -51,3 +48,5 @@ printf "[Desktop Entry]\nName=fusuma\nExec=fusuma -d\nType=Application" > $HOME/
 git config --global gpg.program gpg2
 
 ./setup.sh
+
+sudo apt autoremove nodejs npm -y

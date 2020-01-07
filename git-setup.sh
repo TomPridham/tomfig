@@ -5,7 +5,7 @@ git config --global push.default current
 git config --global commit.gpgsign true
 
 read -p 'enter ssh-key name: ' SSHKEYNAME
-read -sp 'enter ssh-key password' SSHKEYPASSWORD
+read -p 'enter ssh-key password' SSHKEYPASSWORD
 SSHDIR=~/.ssh/${SSHKEYNAME}
 echo
 
@@ -16,6 +16,6 @@ else
 fi;
 
 eval "$(ssh-agent -s)"
-ssh-add -K $SSHDIR
+ssh-add -k $SSHDIR
 
-pbcopy < "${SSHDIR}.pub"
+xclip -sel clip < "${SSHDIR}.pub"

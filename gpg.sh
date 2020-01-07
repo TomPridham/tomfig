@@ -3,4 +3,5 @@ gpg --list-secret-keys --keyid-format LONG
 
 read "enter the gpg key id" GPGID
 
-gpg --armor --export GPGID
+gpg --armor --export GPGID | xclip -sel clip
+git config --global user.signingkey GPGID
