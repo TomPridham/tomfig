@@ -29,7 +29,6 @@ sudo apt install -y \
   ruby \
   software-properties-common \
   tmux \
-  tmux \
   vim-gtk3 \
   xclip \
   xdotool
