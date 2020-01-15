@@ -9,7 +9,6 @@ sudo apt install -y \
   build-essential \
   ca-certificates \
   curl \
-  fonts-firacode \
   git \
   gnome-tweaks \
   gnupg-agent \
@@ -34,6 +33,13 @@ sudo apt install -y \
   vim-gtk3 \
   xclip \
   xdotool
+
+curl -sS https://download.jetbrains.com/fonts/JetBrainsMono-1.0.0.zip > jbmono.zip
+mkdir ~/.fonts
+mv jbmono.zip ~/.fonts/
+unzip jbmono.zip
+rm jbmono.zip
+sudo fc-cache -f -v
 
 sudo apt install -y docker.io  docker-compose
 sudo usermod -aG docker $USER

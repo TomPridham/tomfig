@@ -33,5 +33,5 @@ ln -s $HOME/projects/tomfig/coc-settings.json $HOME/.vim/coc-settings.json
 vim -c 'PlugInstall|qa'
 vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rls coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext|qa'
 
-cargo install cargo-bump cargo-edit cargo-funnel bat
+cargo install cargo-bump cargo-edit cargo-funnel bat broot
 cargo install diesel_cli --no-default-features --features postgres

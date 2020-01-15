@@ -21,7 +21,6 @@ alias ns='npm start'
 alias t='docker exec -it jane-com_webpack_1 touch src/app.js'
 alias ts='docker exec -it jane-seller_webpack_1 touch src/index.js'
 
-export DISPLAY=:0.0
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
 export GOPATH="$HOME/go"
@@ -40,3 +39,5 @@ if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] 
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+source /home/tompridham/.config/broot/launcher/bash/br

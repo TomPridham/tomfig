@@ -9,7 +9,7 @@ filetype plugin indent on
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set clipboard^=unnamed,unnamedplus
+set clipboard=unnamed,unnamedplus
 set cmdheight=2
 set display+=lastline
 set encoding=utf-8
