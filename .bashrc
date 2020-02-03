@@ -1,6 +1,10 @@
 source ~/.bash/git-completion.sh
 source ~/.bash/bash-git-prompt/gitprompt.sh
 
+if [ -f $HOME/.bash_secrets ]; then
+    . $HOME/.bash_secrets
+fi
+
 alias cb='cargo bench'
 alias cc='cargo check'
 alias cr='cargo run'
@@ -14,12 +18,11 @@ alias gp='git pull'
 alias gr='git reset --hard'
 alias gs='git status -u'
 alias gu='git push -u'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 alias la='ls -A1'
 alias ls='ls -1'
-alias masada='cd jane-masada/MVC/VeryJane.Applications.Masada'
 alias ns='npm start'
-alias t='docker exec -it jane-com_webpack_1 touch src/app.js'
-alias ts='docker exec -it jane-seller_webpack_1 touch src/index.js'
 
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
