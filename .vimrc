@@ -46,6 +46,7 @@ cnoreabbrev Q! q!
 cnoreabbrev Qall qall
 cnoreabbrev Qall! qall!
 cnoreabbrev Set set
+cnoreabbrev Sort sort
 cnoreabbrev Stu sort u
 cnoreabbrev W w
 cnoreabbrev W! w!
