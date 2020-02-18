@@ -23,6 +23,7 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 alias la='ls -A1'
 alias ls='ls -1'
 alias ns='npm start'
+alias todo='vim ~/todo.txt'
 
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
