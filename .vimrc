@@ -58,7 +58,6 @@ cnoreabbrev ex Ex
 cnoreabbrev sss syntax sync fromstart
 cnoreabbrev stu sort u
 cnoreabbrev wQ wq
-inoreabbr lmbd λ
 
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 

@@ -28,6 +28,7 @@ alias todo='vim ~/todo.txt'
 
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
+export RUSTC_WRAPPER="sccache"
 export GOPATH="$HOME/go"
 export BREWPATH="/usr/local/sbin"
 export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
