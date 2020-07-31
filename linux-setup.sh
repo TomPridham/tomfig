@@ -23,8 +23,6 @@ sudo apt install -y \
   nodejs \
   npm \
   pkg-config \
-  postgresql-11 \
-  postgresql-contrib \
   ripgrep \
   ruby \
   software-properties-common \
@@ -33,12 +31,6 @@ sudo apt install -y \
   xclip \
   xdotool
 
-curl -sS https://download.jetbrains.com/fonts/JetBrainsMono-1.0.0.zip > jbmono.zip
-mkdir ~/.fonts
-mv jbmono.zip ~/.fonts/
-unzip jbmono.zip
-rm jbmono.zip
-sudo fc-cache -f -v
 
 sudo apt install -y docker.io  docker-compose
 sudo usermod -aG docker $USER
