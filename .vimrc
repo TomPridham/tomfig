@@ -111,7 +111,7 @@ Plug 'bronson/vim-trailing-whitespace'                            " highlight tr
 Plug 'chaoren/vim-wordmotion'                                     " better word jumping, camelCase, snake_case, etc.
 Plug 'drewtempelmeyer/palenight.vim'                              " theme
 Plug 'editorconfig/editorconfig-vim'                              " respect editor config
-Plug 'gorodinskiy/vim-coloresque'                                 " highlight colors
+Plug 'ap/vim-css-color'                                           " highlight colors
 Plug 'itchyny/lightline.vim'                                      " colored status
 Plug 'jiangmiao/auto-pairs'                                       " auto insert pairs of things
 Plug 'scrooloose/nerdcommenter'                                   " comment things
