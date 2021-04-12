@@ -61,12 +61,9 @@ cnoreabbrev wQ wq
 
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
-" tabs
+" spacing
 nnoremap > >>
 nnoremap < <<
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
 
 " match angle brackest
 set matchpairs+=<:>
