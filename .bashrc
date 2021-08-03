@@ -28,7 +28,6 @@ alias todo='vim ~/todo.txt'
 
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
-export RUSTC_WRAPPER="sccache"
 # there is an issue with the sccache daemon dying https://github.com/mozilla/sccache/issues/837
 export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
 export GOPATH="$HOME/go"
@@ -46,7 +45,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] 
     exec tmux
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 source /home/tompridham/.config/broot/launcher/bash/br
+source "$HOME/.cargo/env"
 eval "$(starship init bash)"
