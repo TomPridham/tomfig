@@ -128,15 +128,30 @@ let g:rustfmt_emit_files = 1
 let g:rustfmt_command = 'rustfmt'
 let g:rustfmt_options = ''
 
+" coc-coverage function
+function! LightlineCocCoverageStatus() abort
+  let status = get(g:, 'coc_coverage_lines_pct', '')
+  if empty(status)
+    return ''
+  endif
+
+  return '☂ ' . status . '% Lines Covered'
+endfunction
+
 " lightline/theme settings
 let g:lightline = {
       \ 'colorscheme': 'palenight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+      \   'right':[
+      \     [ 'coccoverage', 'lineinfo', 'percent', 'cocstatus' ],
+      \     [ 'cocapollo' ]
+      \   ],
       \ },
       \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'cocstatus': 'coc#status',
+      \   'coccoverage': 'LightlineCocCoverageStatus'
       \ },
       \ }
 colorscheme palenight
