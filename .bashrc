@@ -1,5 +1,4 @@
 source ~/.bash/git-completion.sh
-source ~/.bash/bash-git-prompt/gitprompt.sh
 
 if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
