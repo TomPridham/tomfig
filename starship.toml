@@ -9,6 +9,7 @@ format = '([\[$all_status$ahead_behind\]]($style))'
 
 [nodejs]
 format = '\[[$symbol($version)]($style)\]'
+symbol = "⬢ "
 
 [memory_usage]
 format = '\[$symbol[$ram( | $swap)]($style)\]'
