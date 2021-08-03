@@ -35,5 +35,5 @@ vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-
 
 cargo install cargo-bump cargo-edit cargo-funnel bat broot sccache
 
-curl -sS https://github.com/JetBrains/JetBrainsMono/releases/download/v2.001/JetBrains.Mono.2.001.zip -o /usr/share/fonts/jbmono.zip
-echo unzip font file and move to ~/.local/share/fonts
+curl -sS https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -o /usr/share/fonts/jbmono_nf.zip
+echo unzip font file and move to ~/.fonts

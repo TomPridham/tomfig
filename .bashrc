@@ -49,3 +49,4 @@ fi
 export PATH="$HOME/.cargo/bin:$PATH"
 
 source /home/tompridham/.config/broot/launcher/bash/br
+eval "$(starship init bash)"
