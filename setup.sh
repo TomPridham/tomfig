@@ -27,6 +27,7 @@ ln -s $HOME/projects/tomfig/.ripgreprc $HOME/.ripgreprc
 ln -s $HOME/projects/tomfig/.vimrc $HOME/.vimrc
 ln -s $HOME/projects/tomfig/coc-settings.json $HOME/.vim/coc-settings.json
 [ ! -d "$HOME/.config/fusuma" ] && ln -s $HOME/projects/tomfig/fusuma $HOME/.config
+[ ! -d "$HOME/.config/" ] && ln -s $HOME/projects/tomfig/starship.toml $HOME/.config
 [ ! -d "$HOME/.config/kitty" ] && ln -s $HOME/projects/tomfig/kitty $HOME/.config
 [ ! -d "$HOME/.config/alacritty" ] && ln -s $HOME/projects/tomfig/alacritty/ $HOME/.config
 
