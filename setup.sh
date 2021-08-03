@@ -1,6 +1,7 @@
 #!/bin/bash
 
 curl https://sh.rustup.rs -sSf | sh
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 source ~/projects/tomfig/.bashrc
 
