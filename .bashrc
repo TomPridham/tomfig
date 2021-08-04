@@ -44,7 +44,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] 
     exec tmux
 fi
 
-
-source /home/tompridham/.config/broot/launcher/bash/br
+source ~/.config/broot/launcher/bash/br
 source "$HOME/.cargo/env"
 eval "$(starship init bash)"
