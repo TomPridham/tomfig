@@ -9,7 +9,7 @@ sudo chown -R $USER /usr/local
 npm i -g n
 n lts
 n prune
-npm i -g npm npx yarn webpack webpack-cli
+npm i -g npm npx yarn webpack webpack-cli luvi
 
 source ~/projects/tomfig/.bashrc
 
@@ -41,7 +41,7 @@ ln -s $HOME/projects/tomfig/starship.toml $HOME/.config
 vim -c 'PlugInstall|qa'
 vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext|qa'
 
-cargo install cargo-release cargo-edit cargo-funnel bat broot sccache
+cargo install cargo-release cargo-edit cargo-funnel bat broot wasm-pack sccache
 
 curl -LsS -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -o ~/.fonts/jbmono_nf.zip --create-dirs
 echo unzip font file
