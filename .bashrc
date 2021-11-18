@@ -1,4 +1,5 @@
 source ~/.bash/git-completion.sh
+source ~/.bash/git-fetch.sh
 
 if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
@@ -6,10 +7,13 @@ fi
 
 alias cb='cargo bench'
 alias cc='cargo check'
+alias cl='cargo clippy -- -D warnings'
 alias cr='cargo run'
 alias ct='cargo test'
-alias gb='git branch'
+alias gb='git branch '
+__git_complete gb _git_branch
 alias gc='git checkout '
+__git_complete gc _git_checkout
 alias gcam='git commit -am '
 alias gd='git diff'
 alias gdc='git diff --name-only --diff-filter=U'
@@ -31,11 +35,11 @@ export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
 # there is an issue with the sccache daemon dying https://github.com/mozilla/sccache/issues/837
 export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
-export GOPATH="$HOME/go"
 export BREWPATH="/usr/local/sbin"
-export PATH="$GOPATH/bin:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
+export PATH="$HOME/dotnet:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export GPG_TTY=$(tty)
+export DOTNET_ROOT=$HOME/dotnet
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi
