@@ -35,11 +35,13 @@ export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
 # there is an issue with the sccache daemon dying https://github.com/mozilla/sccache/issues/837
 export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
-export BREWPATH="/usr/local/sbin"
-export PATH="$HOME/dotnet:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-export GPG_TTY=$(tty)
 export DOTNET_ROOT=$HOME/dotnet
+export BREWPATH="/usr/local/bin"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export PATH="$HOME/dotnet:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
+export GPG_TTY=$(tty)
+# zsh is the default terminal in mac now, this disables a warning when it is disabled
+export BASH_SILENCE_DEPRECATION_WARNING=1
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi
@@ -51,5 +53,5 @@ if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] 
 fi
 
 source ~/.config/broot/launcher/bash/br
-source "$HOME/.cargo/env"
 eval "$(starship init bash)"
+. "$HOME/.cargo/env"

@@ -1,25 +1,18 @@
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install node jq bash bash-completion watch wget gzip gawk gnutls wdiff binutils diffutils gnu-sed ripgrep vim tmux gnupg pinentry-mac
-brew cask install alacritty
+xcode-select --install
+
+echo "xclip node jq bash bash-completion watch wget gzip gawk gnutls wdiff binutils diffutils gnu-sed ripgrep vim tmux gnupg pinentry-mac" | xargs brew install
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
-sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+echo "alacritty rectangle font-jetbrains-mono" | xargs brew install --cask
 
 brew link --overwrite gnupg
+mkdir ~/.gnupg
+touch ~/.gnupg/gpg-agent.conf
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
-killall gpg-agent
 git config --global gpg.program gpg
 
-wget "https://download.docker.com/mac/stable/Docker.dmg"
-sudo hdiutil attach ./Docker.dmg
-sudo cp -R /Volumes/Docker/Docker.app/ /Applications/Docker.app
-sudo hdiutil detach /Volumes/Docker
-rm Docker.dmg
-
-wget "https://bettertouchtool.net/releases/BetterTouchTool.zip"
-unzip ./BetterTouchTool.zip
-sudo cp -R BetterTouchTool.app/ /Applications/BetterTouchTool.app
-rm BetterTouchTool.zip BetterTouchTool.app
+chsh -s /bin/bash
 
 ./setup.sh

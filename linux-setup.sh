@@ -47,3 +47,6 @@ git config --global gpg.program gpg2
 ./setup.sh
 
 sudo apt autoremove nodejs npm -y
+
+curl -LsS -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -o ~/.fonts/jbmono_nf.zip --create-dirs
+echo unzip font file
