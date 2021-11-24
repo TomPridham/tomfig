@@ -13,6 +13,9 @@ touch ~/.gnupg/gpg-agent.conf
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 git config --global gpg.program gpg
 
+# set default shell to bash from zsh
 chsh -s /bin/bash
+# permanently disable app verification warnings
+sudo spctl --master-disable
 
 ./setup.sh

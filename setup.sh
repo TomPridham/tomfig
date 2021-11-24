@@ -14,7 +14,6 @@ ln -s $HOME/projects/tomfig/.bash $HOME/.bash
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bash_profile
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.bashrc
 ln -s $HOME/projects/tomfig/.bashrc $HOME/.profile
-ln -s $HOME/projects/tomfig/.bashrc $HOME/.zprofile
 ln -s $HOME/projects/tomfig/.inputrc $HOME/.inputrc
 ln -s $HOME/projects/tomfig/.ripgreprc $HOME/.ripgreprc
 ln -s $HOME/projects/tomfig/.tmux.conf $HOME/.tmux.conf
@@ -43,6 +42,6 @@ rustup component add rls rust-analysis rust-src clippy rustfmt
 source ~/projects/tomfig/.bashrc
 
 vim -c 'PlugInstall|qa'
-vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext|qa'
+vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext'
 
-cargo install cargo-release cargo-edit cargo-funnel bat broot wasm-pack sccache
+cargo install cargo-release cargo-edit cargo-funnel bat broot wasm-pack sccache cargo-make
