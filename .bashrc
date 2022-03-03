@@ -5,6 +5,9 @@ if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
 fi
 
+# tab cycle through autocomplete options
+bind TAB:menu-complete
+
 alias cb='cargo bench'
 alias cc='cargo check'
 alias cl='cargo clippy -- -D warnings'
@@ -38,6 +41,7 @@ export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
 export DOTNET_ROOT=$HOME/dotnet
 export BREWPATH="/usr/local/bin"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export VIM_LCOV_INFO_FILEPATH=coverage.info
 export PATH="$HOME/dotnet:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"
 export GPG_TTY=$(tty)
 # zsh is the default terminal in mac now, this disables a warning when it is disabled

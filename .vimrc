@@ -138,6 +138,15 @@ function! LightlineCocCoverageStatus() abort
   return '☂ ' . status . '% Lines Covered'
 endfunction
 
+function! LightlineCocLcovStatus() abort
+  let status = get(g:, 'coc_lcov_lines_pct', '')
+  if empty(status)
+    return ''
+  endif
+
+  return '☂ ' . status . '% Lines Covered'
+endfunction
+
 " lightline/theme settings
 let g:lightline = {
       \ 'colorscheme': 'palenight',
@@ -145,13 +154,14 @@ let g:lightline = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
       \   'right':[
-      \     [ 'coccoverage', 'lineinfo', 'percent', 'cocstatus' ],
+      \     [ 'coccoverage', 'coclcov', 'lineinfo', 'percent', 'cocstatus' ],
       \     [ 'cocapollo' ]
       \   ],
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
-      \   'coccoverage': 'LightlineCocCoverageStatus'
+      \   'coccoverage': 'LightlineCocCoverageStatus',
+      \   'coclcov': 'LightlineCocLcovStatus'
       \ },
       \ }
 colorscheme palenight
