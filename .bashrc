@@ -5,9 +5,6 @@ if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
 fi
 
-# tab cycle through autocomplete options
-bind TAB:menu-complete
-
 alias cb='cargo bench'
 alias cc='cargo check'
 alias cl='cargo clippy -- -D warnings'
@@ -39,7 +36,7 @@ export CARGOPATH="$HOME/.cargo/bin"
 # there is an issue with the sccache daemon dying https://github.com/mozilla/sccache/issues/837
 export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
 export DOTNET_ROOT=$HOME/dotnet
-export BREWPATH="/usr/local/bin"
+export BREWPATH="/opt/homebrew/bin"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export VIM_LCOV_INFO_FILEPATH=coverage.info
 export PATH="$HOME/dotnet:$HOME/projects/tomfig/bin:$CARGOPATH:$BREWPATH:$PATH"

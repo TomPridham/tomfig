@@ -8,6 +8,9 @@ env:
   TERM: xterm-256color
 
 window:
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
 
@@ -25,7 +28,7 @@ window:
   #     - none: Neither borders nor title bar
   decorations: full
 
-  startup_mode: Windowed
+  startup_mode: Maximized
   title: Alacritty
   class: Alacritty
 
@@ -38,18 +41,18 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-    family: JetbrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
 
   bold:
-    family: JetbrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono
     style: Bold
 
   italic:
-    family: JetbrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono
     style: Italic
 
-  size: 13.0
+  size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -108,9 +111,6 @@ bell:
   animation: EaseOutExpo
   duration: 0
   color: '0xffffff'
-
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }

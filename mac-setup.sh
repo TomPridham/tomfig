@@ -5,7 +5,7 @@ xcode-select --install
 
 echo "xclip node jq bash bash-completion watch wget gzip gawk gnutls wdiff binutils diffutils gnu-sed ripgrep vim tmux gnupg pinentry-mac" | xargs brew install
 brew tap homebrew/cask-fonts
-echo "alacritty rectangle font-jetbrains-mono" | xargs brew install --cask
+echo "alacritty rectangle font-jetbrains-mono-nerd-font" | xargs brew install --cask
 
 brew link --overwrite gnupg
 mkdir ~/.gnupg
