@@ -123,10 +123,8 @@ let g:rainbow_active = 1
 
 " rust settings
 let g:rustfmt_autosave = 1
-let g:rustfmt_command = "cargo fmt --"
 let g:rustfmt_emit_files = 1
-let g:rustfmt_command = 'rustfmt'
-let g:rustfmt_options = ''
+let g:rustfmt_command = 'rustup run nightly rustfmt'
 
 " coc-coverage function
 function! LightlineCocCoverageStatus() abort

@@ -45,3 +45,7 @@ vim -c 'PlugInstall|qa'
 vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtext'
 
 cargo install cargo-release cargo-edit cargo-funnel bat broot wasm-pack sccache cargo-make
+
+git config --global push.default current
+git config --global user.name "Tom Pridham"
+git config --global user.email "pridham.tom@gmail.com"
