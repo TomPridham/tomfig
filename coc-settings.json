@@ -1,14 +1,9 @@
 {
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "json"
-  ],
-  "eslint.options": {"parser": "@typescript-eslint/parser"},
-  "tsserver.log": "verbose",
-  "yaml.schemas": {
-      "kubernetes": "/*.yaml"
-  }
+  "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.completion.privateEditable.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": true,
+  "rust-analyzer.checkOnSave.enable": false,
+  "rust-analyzer.lens.enable": true,
+  "rust-analyzer.lru.capacity": 80096,
+  "tsserver.log": "verbose"
 }
