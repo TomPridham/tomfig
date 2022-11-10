@@ -11,5 +11,6 @@ gpg --list-secret-keys --keyid-format LONG
 echo "the key is of the form: sec 4096R/XXXXXXXXXXXXXXXX"
 read -p "enter the gpg key id: " GPGID
 
+git config --global --unset gpg.format
 sudo gpg --armor --export GPGID | vim -
 git config --global user.signingkey GPGID
