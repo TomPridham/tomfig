@@ -5,6 +5,10 @@ if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
 fi
 
+findandkill() {
+    port=$(lsof -n -i4TCP:$1 | grep LISTEN | awk '{ print $2 }');
+    kill -9 $port
+}
 alias cb='cargo bench'
 alias cc='cargo check'
 alias cl='cargo clippy -- -D warnings'
@@ -26,6 +30,7 @@ alias gs='git status -u'
 alias gu='git push -u'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
+alias killport=findandkill
 alias la='ls -A1'
 alias ls='ls -1'
 alias ns='npm start'
