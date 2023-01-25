@@ -116,6 +116,7 @@ Plug 'vim-scripts/paredit.vim'                                    " balance pare
 Plug 'vim-scripts/syntaxcomplete'                                 " syntax completion
 Plug 'quramy/vim-js-pretty-template'                              " pretty template strings
 Plug 'sheerun/vim-polyglot'                                       " polyglot lang highlighting, etc
+Plug 'rust-lang/rust.vim'                                         " rust syntax stuff
 call plug#end()
 
 " rainbow parens
@@ -125,6 +126,10 @@ let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 let g:rustfmt_command = 'rustup run nightly rustfmt'
+
+" prettier settings
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " coc-coverage function
 function! LightlineCocCoverageStatus() abort
