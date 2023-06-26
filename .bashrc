@@ -14,6 +14,7 @@ alias cc='cargo check'
 alias cl='cargo clippy -- -D warnings'
 alias cr='cargo run'
 alias ct='cargo test'
+alias cw='cargo watch'
 alias gb='git branch '
 __git_complete gb _git_branch
 alias gc='git checkout '

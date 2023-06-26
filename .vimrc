@@ -56,6 +56,7 @@ cnoreabbrev Wq wq
 cnoreabbrev X x
 cnoreabbrev ex Ex
 cnoreabbrev sss syntax sync fromstart
+cnoreabbrev Sss syntax sync fromstart
 cnoreabbrev stu sort u
 cnoreabbrev wQ wq
 
@@ -117,7 +118,13 @@ Plug 'vim-scripts/syntaxcomplete'                                 " syntax compl
 Plug 'quramy/vim-js-pretty-template'                              " pretty template strings
 Plug 'sheerun/vim-polyglot'                                       " polyglot lang highlighting, etc
 Plug 'rust-lang/rust.vim'                                         " rust syntax stuff
+Plug 'github/copilot.vim'                                         " copilot
 call plug#end()
+
+" github copilot
+let g:copilot_filetypes = {
+      \ 'txt': v:false,
+      \ }
 
 " rainbow parens
 let g:rainbow_active = 1
@@ -183,30 +190,27 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%121v', 100)
 
 " nerdcommenter
-let g:NERDCustomDelimiters={
-	\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
-\}
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 " CoC
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugins.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)

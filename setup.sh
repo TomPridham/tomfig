@@ -32,7 +32,7 @@ sudo chown -R $USER /usr/local/bin
 npm i -g n
 n lts
 n prune
-npm i -g npm npx yarn webpack webpack-cli luvi
+npm i -g npm npx yarn webpack webpack-cli luvi prettier prettier-plugin-rust
 
 source ~/projects/tomfig/.bashrc
 
