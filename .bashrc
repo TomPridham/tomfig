@@ -9,7 +9,7 @@ findandkill() {
     port=$(lsof -n -i4TCP:$1 | grep LISTEN | awk '{ print $2 }');
     kill -9 $port
 }
-alias cb='cargo bench'
+alias cb='cargo build'
 alias cc='cargo check'
 alias cl='cargo clippy -- -D warnings'
 alias cr='cargo run'

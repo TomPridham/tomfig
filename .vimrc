@@ -3,6 +3,8 @@ let mapleader="\<Space>"
 autocmd BufEnter * :syntax sync minlines=200
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+autocmd FileType markdown setlocal spell
+autocmd FileType txt setlocal spell
 au BufRead,BufNewFile *.ts set filetype=typescript
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact
 filetype plugin indent on

@@ -6,6 +6,8 @@
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "inlayHint.enable": false,
   "rust-analyzer.lens.enable": true,
-  "rust-analyzer.lru.capacity": 80096,
-  "tsserver.log": "verbose"
+  "rust-analyzer.lru.capacity": 542000,
+  "[java]": {
+    "coc.preferences.formatOnSave": true
+  }
 }

@@ -3,3 +3,7 @@
 --hidden
 --trim
 --glob=!grapesoda/*
+--glob=!marvin_verifier/*
+--glob=!test-world/*
+--type-add
+test:*.test.{js,jsx,ts,tsx}
