@@ -18,4 +18,8 @@ chsh -s /bin/bash
 # permanently disable app verification warnings
 sudo spctl --master-disable
 
+mkdir -p $HOME/.bash
+mkdir -p $HOME/.vim
+
+source ~/projects/tomfig/.bashrc
 ./setup.sh

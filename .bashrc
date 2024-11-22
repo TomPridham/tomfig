@@ -1,5 +1,5 @@
-source ~/.bash/git-completion.sh
-source ~/.bash/git-fetch.sh
+. ~/.bash/git-completion.sh
+. ~/.bash/git-fetch.sh
 
 if [ -f $HOME/.bash_secrets ]; then
     . $HOME/.bash_secrets
@@ -59,6 +59,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] 
     exec tmux
 fi
 
-source ~/.config/broot/launcher/bash/br
+. ~/.config/broot/launcher/bash/br
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
