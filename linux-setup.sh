@@ -1,6 +1,5 @@
 #!/bin/bash
 
-setxkbmap -option "caps:swapescape"
 sudo apt update
 sudo apt install -y \
   apt-transport-https \

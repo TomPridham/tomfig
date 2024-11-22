@@ -35,7 +35,7 @@ alias killport=findandkill
 alias la='ls -A1'
 alias ls='ls -1'
 alias ns='npm start'
-alias todo='vim ~/todo.txt'
+alias todo='nvim ~/todo.txt'
 
 export TERM=xterm-256color
 export CARGOPATH="$HOME/.cargo/bin"
@@ -54,10 +54,6 @@ GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
 set -o vi
 
 chmod +x $HOME/projects/tomfig/bin/*.sh
-
-if command -v tmux &> /dev/null && [ -n "$PS1"  ] && [[ ! "$TERM" =~ screen  ]] && [[ ! "$TERM" =~ tmux  ]] && [ -z "$TMUX"  ]; then
-    exec tmux
-fi
 
 . ~/.config/broot/launcher/bash/br
 eval "$(starship init bash)"
