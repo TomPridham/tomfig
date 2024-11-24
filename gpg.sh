@@ -1,3 +1,5 @@
+chown -R $(whoami) ~/.gnupg/
+
 gpg --default-new-key-algo rsa4096 --gen-key
 gpg --list-secret-keys --keyid-format LONG
 

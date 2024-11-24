@@ -24,12 +24,12 @@ sudo apt install -y \
   ruby \
   software-properties-common \
   tmux \
-  vim-gtk3 \
   xclip \
   xdotool
 
 
-sudo snap install alacritty nvim
+sudo snap install alacritty --classic
+sudo snap install nvim --classic
 sudo apt install -y docker.io  docker-compose
 sudo usermod -aG docker $USER
 sudo chmod 666 /var/run/docker.sock
