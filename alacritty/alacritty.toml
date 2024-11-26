@@ -101,7 +101,7 @@ key = "Return"
 mods = "Alt"
 
 [[keyboard.bindings]]
-action = "SpawnNewInstance"
+action = "CreateNewWindow"
 key = "N"
 mods = "Control"
 
@@ -638,7 +638,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
 program = "/bin/bash"
-args = ["--login", "-c", "tmux a -t base || tmux new -s base"]
+args = ["--login", "-c", "tmux "]
 
 [window]
 class = "Alacritty"
