@@ -2,6 +2,6 @@
 --smart-case
 --hidden
 --trim
---glob=!wasm-lib/*
+--glob=!**/wasm-lib/*
 --type-add
 test:*.test.{js,jsx,ts,tsx}

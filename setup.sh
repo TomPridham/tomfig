@@ -41,8 +41,8 @@ rustup component add rls rust-analysis rust-src clippy rustfmt
 
 source ~/projects/tomfig/.bashrc
 
-vim -c 'PlugInstall|qa'
-vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtex'
+nvim -c 'PlugInstall|qa'
+nvim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-rust-analyzer coc-yaml coc-highlight coc-emmet coc-snippets coc-lists coc-vimtex'
 
 cargo install cargo-release cargo-edit cargo-funnel bat broot wasm-pack cargo-make
 

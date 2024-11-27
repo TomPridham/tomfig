@@ -3,7 +3,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 xcode-select --install
 
-echo "xclip node jq bash bash-completion watch wget gzip gawk gnutls wdiff binutils diffutils gnu-sed ripgrep vim tmux gnupg pinentry-mac" | xargs brew install
+echo "xclip node jq bash bash-completion watch wget gzip gawk gnutls wdiff binutils diffutils gnu-sed ripgrep nvim tmux gnupg pinentry-mac" | xargs brew install
 brew tap homebrew/cask-fonts
 echo "alacritty rectangle font-jetbrains-mono-nerd-font" | xargs brew install --cask
 

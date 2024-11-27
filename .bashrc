@@ -58,3 +58,5 @@ chmod +x $HOME/projects/tomfig/bin/*.sh
 . ~/.config/broot/launcher/bash/br
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
+
+source /home/tom/.config/broot/launcher/bash/br
