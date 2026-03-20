@@ -38,6 +38,7 @@ alias ns='npm start'
 alias todo='nvim ~/todo.txt'
 
 export TERM=xterm-256color
+export SUDO_EDITOR=nvim
 export CARGOPATH="$HOME/.cargo/bin"
 # there is an issue with the sccache daemon dying https://github.com/mozilla/sccache/issues/837
 export SCCACHE_IDLE_TIMEOUT=0 sccache --start-server &> /dev/null
@@ -60,3 +61,4 @@ eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 
 source /home/tom/.config/broot/launcher/bash/br
+export PATH="$HOME/.local/bin:$PATH"

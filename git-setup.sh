@@ -1,6 +1,6 @@
 git config --global user.name "Tom Pridham"
 git config --global user.email "pridham.tom@gmail.com"
-git config --global core.editor "vim"
+git config --global core.editor "nvim"
 git config --global push.default current
 git config --global commit.gpgsign true
 
